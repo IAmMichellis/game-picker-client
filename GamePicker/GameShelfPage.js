@@ -12,29 +12,28 @@ import {
 } from 'react-native';
 
 type Props = {};
-export default class PickerPage extends Component<Props> {
+export default class GameShelfPage extends Component<Props> {
 
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.description}>
-          Picker Page!
+          Game Shelf Page!
         </Text>
       </View>
     );
   }
 }
-
-PickerPage.options = {
+GameShelfPage.options = {
   topBar: {
     title: {
-      text: 'Chooooose'
+      text: 'Game Shelf'
     }
   },
   bottomTab: {
-    text: 'Choose'
+    text: 'Shelf'
   }
-};
+}
 
 const styles = StyleSheet.create({
   description: {
