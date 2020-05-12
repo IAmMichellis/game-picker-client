@@ -1,9 +1,18 @@
-/**
- * @format
- */
-
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
-
-AppRegistry.registerComponent(appName, () => App);
+import {Navigation} from "react-native-navigation";
+import PickerPage from "./PickerPage";
+Navigation.registerComponent('com.gamePicker.PickerPage', () => PickerPage);
+Navigation.events().registerAppLaunchedListener(() => {
+  Navigation.setRoot({
+    root: {
+      stack: {
+        children: [
+          {
+            component: {
+              name: 'com.gamePicker.PickerPage',
+            },
+          },
+        ],
+      },
+    },
+  });
+});
